@@ -1,0 +1,25 @@
+---
+- name: Copy website file template
+  template:
+    src: "{{ file_template }}"
+    dest: "/home/{{ ansible_user }}/index.html"
+
+- name: Obtenir la liste des conteneurs
+  command: docker ps -a --format "{{'{{'}}.Names{{'}}'}}"
+  register: container_list
+
+- name: Supprimer les conteneurs s'ils existent
+  docker_container:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ container_list.stdout_lines }}"
+  when: "'webapp_site' in item"
+
+- name: Create Apache container
+  docker_container:
+    name: webapp_site
+    image: httpd
+    ports:
+        - "{{ webapp_port }}:{{ apache_port }}"
+    volumes:
+        - "/home/{{ ansible_user }}/index.html:/usr/local/apache2/htdocs/index.html"

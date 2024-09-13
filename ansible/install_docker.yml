@@ -1,0 +1,31 @@
+---
+- name: Installer Docker en utilisant un script d'installation
+  hosts: "dev"
+  become: yes
+  remote_user: ubuntu
+  tasks:
+    - name: Télécharger le script d'installation de Docker
+      get_url:
+        url: https://get.docker.com
+        dest: /tmp/get-docker.sh
+        mode: '0755'
+
+    - name: Exécuter le script d'installation de Docker
+      command: /tmp/get-docker.sh
+
+    - name: Démarrer et activer le service Docker
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Assurer que le groupe docker existe
+      group:
+        name: docker
+        state: present
+
+    - name: Ajouter l'utilisateur ec2-user au groupe docker
+      user:
+        name: ubuntu
+        groups: docker
+        append: yes

@@ -1,0 +1,24 @@
+---
+- name: Mettre à jour les variables d'hôtes depuis un fichier
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Lire le fichier public_ip.txt
+      slurp:
+        src: ../public_ip.txt
+      register: host_file
+
+    - name: Décoder le contenu du fichier
+      set_fact:
+        ansible_host: "{{ host_file['content'] | b64decode | trim }}"
+
+    - name: Écrire l'hôte dans le fichier d'hôtes de dev
+      copy:
+        dest: "../ansible/host_vars/serveur_dev.yml"
+        content: |
+          ansible_host: {{ ansible_host }}
+      when: ansible_host is defined
+
+    - name: Afficher l'hôte ajouté
+      debug:
+        msg: "Hôte ajouté: {{ ansible_host }}"

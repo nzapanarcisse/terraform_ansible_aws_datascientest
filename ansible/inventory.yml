@@ -1,0 +1,8 @@
+dev:
+  hosts:
+    serveur_dev:
+
+prod:
+  hosts:
+    serveur_prod:
+     

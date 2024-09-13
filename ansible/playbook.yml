@@ -1,0 +1,9 @@
+---
+- hosts: "dev"
+  become: true
+  remote_user: ubuntu
+#  vars_files:
+#    - files/secrets/credentials.yml
+  roles:
+    - geerlingguy.docker
+    - { role: apache-static-site}

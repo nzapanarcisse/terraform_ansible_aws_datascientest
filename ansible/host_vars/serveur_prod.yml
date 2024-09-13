@@ -1,0 +1,4 @@
+---
+ansible_user: "{{ prod_ansible_user }}"
+ansible_password: "{{ prod_ansible_password }}"
+ansible_host: "{{ prod_ansible_host }}"
