@@ -13,7 +13,7 @@ resource "aws_instance" "ic-webapp-ec2" {
   }
 
   provisioner "local-exec" {
-    command = "echo ${var.public_ip} > /home/nzapa/projet/easytraining/datascientestTraining/datascientest_terraform/public_ip.txt"
+    command = "echo ${var.public_ip} > /home/nzapa/projet/easytraining/datascientestTraining/terraform_ansible_aws/public_ip.txt"
   }
 
 }
