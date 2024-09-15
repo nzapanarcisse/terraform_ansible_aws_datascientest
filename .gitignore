@@ -3,6 +3,6 @@
 ansible/roles/geerlingguy.pip/
 ansible/roles/geerlingguy.docker/
 app/.terraform/
-app/.terraform.lock.hcl/
+app/.terraform.lock.hcl
 
 .idea/
