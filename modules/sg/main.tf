@@ -31,8 +31,8 @@ resource "aws_security_group" "my_sg" {
 
   ingress {
     description      = "ic-webapp from all"
-    from_port        = 8000
-    to_port          = 8000
+    from_port        = 8072
+    to_port          = 8072
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]

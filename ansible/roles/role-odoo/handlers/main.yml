@@ -1,0 +1,5 @@
+---
+- name: Restart Odoo
+  command: docker-compose up -d
+  args:
+    chdir: "$PWD"
