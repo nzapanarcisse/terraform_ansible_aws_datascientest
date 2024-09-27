@@ -3,5 +3,3 @@
 
 # Install a role for docker
 - src: geerlingguy.docker
-# Install a role for docker-compose
-- src: geerlingguy.docker_compose
