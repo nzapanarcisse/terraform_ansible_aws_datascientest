@@ -1,10 +1,49 @@
 # Provisionnement et Déploiement d'Odoo sur AWS avec Terraform et Ansible
 
-## Introduction
+# Cas Pratique : Migration d'Infrastructure avec Terraform et Ansible
 
-Ce projet vise à provisionner des machines sur AWS en utilisant Terraform, puis à configurer et déployer l'application Odoo via Ansible.
+## Contexte
 
-## Architecture du Projet
+La Direction des Systèmes d'Information (DSI) de l'entreprise Proven-FR, basée en France, souhaite migrer son infrastructure pour tirer parti des avantages du cloud. Par le passé, l'entreprise a rencontré des difficultés lors de la mise en production de ses diverses applications en raison de l'absence de pratiques DevOps et du manque de concepts tels que l'Infrastructure as Code.
+
+Le département d'innovation désire révolutionner l'infrastructure existante afin de garantir qu'elle soit évolutive, facilement déployable et maximisée en termes d'automatisation. Proven-FR a besoin d'un DevOps pour construire un **Proof of Concept (POC)** démontrant comment Terraform, couplé à Ansible, peut les aider et prouver l'efficacité de ces deux technologies pour automatiser les mises en production des applications.
+
+## Applications Concernées
+
+Actuellement, Proven-FR possède deux applications dans sa ferme logicielle :
+1. **Site Web Vitrine** de l'entreprise
+2. **Logiciel de Gestion Intégré (ERP)** : Odoo, version 16
+
+Ces deux applications fonctionnent sur un serveur, et le département d'innovation souhaite les migrer vers le cloud AWS.
+
+## Objectif du Projet
+
+Votre rôle en tant que DevOps sera de :
+1. **Initier un projet Terraform-Ansible** divisé en deux parties :
+
+### 1ère Partie : Provisionnement de l'Infrastructure sur AWS
+
+Dans cette partie, vous devez utiliser la notion de **modules** sous Terraform pour mettre en place trois modules ayant pour objectif respectif :
+- **Création d'une instance EC2**
+- **Création d'un groupe de sécurité**
+- **Attribution d'une Elastic IP**
+
+Ces modules devront être conçus de manière à pouvoir être réutilisés dans d'autres projets si nécessaire.
+
+### 2ème Partie : Déploiement des Applications avec Ansible
+
+Cette partie consiste à mettre en place des **playbooks Ansible** pour faciliter le déploiement des applications sur les ressources créées précédemment.
+
+#### Détails Techniques
+
+- **Site Web Vitrine** : Utiliser une image Apache (version à spécifier).
+- **ERP Odoo** : Utiliser la version 16 d'Odoo.
+
+Les deux applications doivent être déployées sous forme de **rôles** dans Ansible.
+
+
+Ce projet permettra non seulement de moderniser l'infrastructure de Proven-FR, mais aussi de démontrer l'efficacité de Terraform et Ansible pour automatiser les processus de déploiement. Ce cas pratique sera une excellente occasion d'appliquer vos compétences en DevOps.
+## EXEMPLE DE SOLUTION
 
 1. **Provisionnement avec Terraform**
     - **Modules Terraform** :
