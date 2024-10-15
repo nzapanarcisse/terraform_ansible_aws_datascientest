@@ -5,7 +5,7 @@
   tasks:
     - name: Lire le fichier public_ip.txt
       slurp:
-        src: ../public_ip.txt
+        src: ../app/public_ip.txt
       register: host_file
 
     - name: Décoder le contenu du fichier
