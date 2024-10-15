@@ -6,19 +6,21 @@
 
 La Direction des Systèmes d'Information (DSI) de l'entreprise Proven-FR, basée en France, souhaite migrer son infrastructure pour tirer parti des avantages du cloud. Par le passé, l'entreprise a rencontré des difficultés lors de la mise en production de ses diverses applications en raison de l'absence de pratiques DevOps et du manque de concepts tels que l'Infrastructure as Code.
 
-Le département d'innovation désire révolutionner l'infrastructure existante afin de garantir qu'elle soit évolutive, facilement déployable et maximisée en termes d'automatisation. Proven-FR a besoin d'un DevOps pour construire un **Proof of Concept (POC)** démontrant comment Terraform, couplé à Ansible, peut les aider et prouver l'efficacité de ces deux technologies pour automatiser les mises en production des applications.
+Le département d'innovation désire révolutionner l'infrastructure existante afin de garantir qu'elle soit évolutive, facilement déployable et maximisée en termes d'automatisation. 
 
-## Applications Concernées
+Proven-FR a besoin d'un Ingénieur DevOps pour construire un **Proof of Concept (POC)** démontrant comment Terraform, couplé à Ansible, peut les aider à automatiser le provisionnement de leur infrastructure sur aws ainsi que les mises en production des applications de l'entreprise.
+
+## Applications
 
 Actuellement, Proven-FR possède deux applications dans sa ferme logicielle :
 1. **Site Web Vitrine** de l'entreprise
 2. **Logiciel de Gestion Intégré (ERP)** : Odoo, version 16
 
-Ces deux applications fonctionnent sur un serveur, et le département d'innovation souhaite les migrer vers le cloud AWS.
+Ces deux applications fonctionnent Actuellement sur un serveur, et le département d'innovation souhaite les migrer vers le cloud AWS.
 
 ## Objectif du Projet
 
-Votre rôle en tant que DevOps sera de :
+Votre rôle en tant que Ingénieur DevOps sera de :
 1. **Initier un projet Terraform-Ansible** divisé en deux parties :
 
 ### 1ère Partie : Provisionnement de l'Infrastructure sur AWS
