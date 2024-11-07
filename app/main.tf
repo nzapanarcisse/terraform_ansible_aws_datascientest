@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket                  = "terraform-backend-lepro"
+    bucket                  = "terraform-backend-lepros"
     key                     = "Lepro-dev.tfstate"
     region                  = "us-east-1"
   }
