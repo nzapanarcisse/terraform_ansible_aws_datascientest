@@ -145,6 +145,22 @@ Pour se connecter à vos instances EC2 par SSH, vous devez créer et télécharg
    ansible-vault encrypt file
    ansible-galaxy install -r roles/requirement.yml
    ansible-playbook playbook.yml --ask-vault-pass
+### Resultats
+![image](https://github.com/user-attachments/assets/cfb1c4e5-71f0-4f09-8b8f-5ff02d10968c)
+![image](https://github.com/user-attachments/assets/7eb00e16-62cc-418b-aeb4-b19ac2d7d62d)
+
+
+#### verification installation docker sur notre ec2 aws 
+![image](https://github.com/user-attachments/assets/3d878e1b-e2ab-42ed-a3c9-aa34534b1dcc)
+#### verification disponibilité du site de l'entreprise
+![image](https://github.com/user-attachments/assets/d813f452-62b4-41d1-9154-1fa10394ea42)
+#### verification disponibilité du odoo de l'entreprise
+![image](https://github.com/user-attachments/assets/c37ab003-82ca-432d-8047-05e8fa2bb73a)
+![image](https://github.com/user-attachments/assets/57163248-657a-4816-a792-2d6d53eb62db)
+![image](https://github.com/user-attachments/assets/b42645b1-62f2-46e5-9a7d-d7a794700255)
+
+
+
 
 ## Conclusion
 Ce projet vous permet de déployer facilement Odoo sur AWS tout en utilisant les meilleures pratiques de gestion de code avec Terraform et Ansible. Assurez-vous de suivre les instructions ci-dessus pour une configuration réussie.
